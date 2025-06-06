@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "The Chamber of Secrets.sln"
+    "dotnet.defaultSolution": "TheChamberOfPuzzles.sln"
 }
