@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/letterH.fbx.meta
 guid: 255f179b24421934ca20327fa5703b17
+========
+guid: 03c51877ef15fba47859048c1e7284a1
+>>>>>>>> cee6519ff291339b0b0d9ce284c3fb841f3fd38c:Assets/Models/EndSafe3.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

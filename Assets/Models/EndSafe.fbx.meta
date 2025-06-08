@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/EndSafe.fbx.meta
 guid: 95a19318ab0e47d4883fa4e1e7fa1a29
+========
+guid: bf9119ee979d20d43ac07c0fb071e138
+>>>>>>>> cee6519ff291339b0b0d9ce284c3fb841f3fd38c:Assets/Models/maze.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []

@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Models/letterA.fbx.meta
-guid: e86772363cadc0940b751e6942fe6f51
+<<<<<<<< HEAD:Assets/Models/EndSafe.fbx.meta
+guid: 17f0511ef895d5b46be4de37d9f4758e
 ========
-guid: 4c986f88c419c8b4dab1923a5bd1e936
->>>>>>>> cee6519ff291339b0b0d9ce284c3fb841f3fd38c:Assets/Models/maze2.fbx.meta
+guid: bf9119ee979d20d43ac07c0fb071e138
+>>>>>>>> cee6519ff291339b0b0d9ce284c3fb841f3fd38c:Assets/Models/maze.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
