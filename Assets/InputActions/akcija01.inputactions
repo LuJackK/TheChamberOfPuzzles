@@ -1,0 +1,45 @@
+{
+    "name": "akcija01",
+    "maps": [
+        {
+            "name": "PomeriDelic",
+            "id": "b16e6461-1b49-47ba-a45a-e8c5d670778c",
+            "actions": [
+                {
+                    "name": "Pomeranje",
+                    "type": "Button",
+                    "id": "51b19cd6-4563-4bed-9e13-fbaa11765fae",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9dcf4ab2-405c-46a0-a17a-1d38bcc0d3cc",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pomeranje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da0d8634-ccc2-4c19-8de0-cdb5837d9f2e",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pomeranje",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
