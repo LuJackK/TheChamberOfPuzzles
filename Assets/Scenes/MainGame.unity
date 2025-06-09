@@ -301,29 +301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: maze2
       objectReference: {fileID: 0}
-    - target: {fileID: 5194728975563783467, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9013299588958361871, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9013299588958361871, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9013299588958361871, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 8454716071348239095, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
+      propertyPath: imageTarget
+      value: 
+      objectReference: {fileID: 44919159}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 182021177839949221, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1804275464}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
 --- !u!1 &1019754283
 GameObject:
@@ -490,25 +475,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1804275458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 182021177839949221, guid: a689c3210887b9d4193c8535f75f7b66, type: 3}
-  m_PrefabInstance: {fileID: 812864985}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1804275464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804275458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ac9cdc602626ed4495d03bff810cd42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageTarget: {fileID: 44919159}
-  gravityScale: 9.81
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
