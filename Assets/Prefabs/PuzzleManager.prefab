@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6372159122662159015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753082186234680976}
+  - component: {fileID: 1032246938736886712}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &753082186234680976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372159122662159015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06089104, y: 0.039318383, z: 0.028636971}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032246938736886712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372159122662159015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5c618b2c1f5134d973a2e145a3a7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawerAnimator: {fileID: 0}
+  VaultDoorAnimator: {fileID: 0}
+  picturePuzzleSolved: {fileID: 0}
+  mazeController: {fileID: 0}
+  puzzleGoal: {fileID: 0}
+  glowingMaterial: {fileID: 2100000, guid: 2182c84bc49c30b43ac979be3b02d2d9, type: 2}
+  letterA: {fileID: 0}
+  letterH: {fileID: 0}
+  letterL: {fileID: 0}
+  letterM: {fileID: 0}
+  letterO: {fileID: 0}
+  letterR: {fileID: 0}

@@ -5,62 +5,59 @@ public class PuzzleManager : MonoBehaviour
     public Animator DrawerAnimator;
     public Animator VaultDoorAnimator;
 
-    private bool picturePuzzleSolved = false;
-    private bool letters1Colored = false;
-    private bool letters2Colored = false;
-    private bool letters3Colored = false;
+    public PicturePuzzle picturePuzzleSolved;
 
     public MazeFinsihedChecker mazeController;
     public PuzzleGoal puzzleGoal;
 
     public Material glowingMaterial;
 
-    public Renderer letterA;
-    public Renderer letterH;
-    public Renderer letterL;
-    public Renderer letterM;
-    public Renderer letterO;
-    public Renderer letterR;
+    public MeshRenderer letterA;
+    public MeshRenderer letterH;
+    public MeshRenderer letterL;
+    public MeshRenderer letterM;
+    public MeshRenderer letterO;
+    public MeshRenderer letterR;
 
 
-    public void OnCubePulled()
+    void Update()
     {
-        
-    }
-
-    private void CheckAllPuzzles()
-    {
-        if (!letters1Colored && mazeController.isBallFinished)
-        {
-            ColorLetters(letterA, letterH);
-            letters1Colored = true;
-        }
-
-        if (!letters2Colored)
-        {
-            ColorLetters(letterL, letterM);
-            letters2Colored = true;
-        }
-
-        if (!letters3Colored && puzzleGoal.puzzleComplete)
-        {
-            DrawerAnimator.Play("DrawerOpen");
-            ColorLetters(letterO, letterR);
-            letters3Colored = true;
-        }
-
+        CheckAllPuzzles();
         if (mazeController.isBallFinished && picturePuzzleSolved && puzzleGoal.puzzleComplete)
         {
             VaultDoorAnimator.Play("VaultOpen");
         }
     }
 
-    public void ColorLetters(params Renderer[] letters)
+    private void CheckAllPuzzles()
     {
-        foreach (Renderer r in letters)
+        if (mazeController.isBallFinished)
         {
-            r.material = glowingMaterial;
+
+            ColorLetters(letterA);
+            ColorLetters(letterH);
+          
         }
+
+        if (picturePuzzleSolved.isPuzzleFinished)
+        {
+            ColorLetters(letterL);
+            ColorLetters(letterM);
+        
+        }
+
+        if (puzzleGoal.puzzleComplete)
+        {
+            DrawerAnimator.Play("DrawerOpen");
+            ColorLetters(letterO);
+            ColorLetters(letterR);
+         
+        }
+    }
+
+    public void ColorLetters(MeshRenderer letter)
+    {
+        letter.material = glowingMaterial;
     }
 
 }

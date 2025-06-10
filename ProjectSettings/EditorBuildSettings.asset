@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MainGame.unity
-    guid: b148fd28bdf6202439ba3dde7f6bcbc1
-  - enabled: 0
-    path: Assets/Scenes/PuzzleMainAleksandra.unity
-    guid: a64b5425275ddc147ae515758f78d43f
   - enabled: 1
-    path: Assets/Scenes/AleksandraTestiraVuforiu.unity
-    guid: d5807db3649cd214787c336f7834b3ba
+    path: Assets/Scenes/MAIN.unity
+    guid: c1d4d750eebe4f84cbade27409f33cf2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c1072bfa65443f74c81809de4567a367, type: 2}
