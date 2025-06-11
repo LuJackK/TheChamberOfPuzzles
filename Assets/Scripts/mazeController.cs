@@ -5,7 +5,7 @@ public class MazeFinsihedChecker : MonoBehaviour
     public GameObject ball;    // Reference to TheSnitch
     public GameObject finish;  // Reference to Finish trigger
 
-    public float finishDistance = 0.5f; // Distance to consider as 'reached'
+    public float finishDistance = 0.00005f; // Distance to consider as 'reached'
     public bool isBallFinished = false;
     void Update()
     {
@@ -13,13 +13,9 @@ public class MazeFinsihedChecker : MonoBehaviour
 
         if (distance < finishDistance)
         {
-            //Debug.Log("Maze completed!");
+            Debug.Log("Maze completed!");
             isBallFinished = true;
         }
-        if (ball.transform.localPosition.y < -5)
-        {
-            //Debug.Log("I have fallen!");
-            ball.transform.localPosition = new Vector3(3.67f, 3.86f, 6.33f);
-        }
+   
     }
 }

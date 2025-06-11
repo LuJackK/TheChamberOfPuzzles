@@ -1,64 +1,48 @@
 using UnityEngine;
-using Vuforia;
 
-[RequireComponent(typeof(Rigidbody))]
 public class BallGravity : MonoBehaviour
 {
-    public Transform imageTarget;             // The Image Target or parent that defines local gravity direction
-    public float gravityScale = 9.81f;        // Gravity strength
-
-    private Rigidbody rb;
-    private bool isTracked = false;           // Whether the Image Target is currently tracked
+    public Transform imageTarget;                // Reference to the image target
+    public float heightAboveMaze = 0.01f;        // Distance above the maze surface to snap the ball
+    public float maxAllowedDistance = 0.05f;     // If further than this, reposition it
+    private Vector3 localOffsetToImageTarget;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
         if (imageTarget == null)
         {
-            Debug.LogError("Image Target not assigned to BallGravity script.");
             enabled = false;
             return;
         }
 
-        // Subscribe to the tracking status updates of the image target
-        ObserverBehaviour observer = imageTarget.GetComponent<ObserverBehaviour>();
-        if (observer != null)
+        localOffsetToImageTarget = imageTarget.InverseTransformPoint(transform.position);
+
+        // Disable physics-related components
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
         {
-            observer.OnTargetStatusChanged += OnTargetStatusChanged;
+            rb.useGravity = false;
+            rb.isKinematic = true;
         }
-        else
-        {
-            Debug.LogError("ObserverBehaviour component not found on the assigned Image Target.");
-        }
+
+        Application.targetFrameRate = 60;
     }
 
-    void OnDestroy()
+    void Update()
     {
-        // Unsubscribe from tracking events
-        if (imageTarget != null)
+        if (imageTarget == null || !imageTarget.gameObject.activeInHierarchy) return;
+
+        // Calculate expected position on the maze
+        Vector3 expectedWorldPos = imageTarget.TransformPoint(localOffsetToImageTarget);
+
+        // Check distance from current ball position to maze surface
+        float distance = Vector3.Distance(transform.position, expectedWorldPos);
+
+        if (distance > maxAllowedDistance)
         {
-            ObserverBehaviour observer = imageTarget.GetComponent<ObserverBehaviour>();
-            if (observer != null)
-            {
-                observer.OnTargetStatusChanged -= OnTargetStatusChanged;
-            }
+            // Too far — reposition it just above the maze
+            Vector3 aboveMazePos = expectedWorldPos + imageTarget.up * heightAboveMaze;
+            transform.position = aboveMazePos;
         }
-    }
-
-    // Called when tracking state of the target changes
-    private void OnTargetStatusChanged(ObserverBehaviour behaviour, TargetStatus status)
-    {
-        isTracked = status.Status == Status.TRACKED || status.Status == Status.EXTENDED_TRACKED;
-    }
-
-    void FixedUpdate()
-    {
-        if (!isTracked) return;
-
-        // Simulate gravity based on the "up" direction of the image target
-        Vector3 simulatedGravity = -imageTarget.up * gravityScale;
-        rb.AddForce(simulatedGravity, ForceMode.Acceleration);
     }
 }
-    
